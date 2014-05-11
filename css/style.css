@@ -1,0 +1,43 @@
+body {
+  padding-top: 0;
+  font-family: "petersburg-web",serif;
+  background-color: #333;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: "federico-web",serif;
+}
+h1 {
+  font-size: 70px;
+}
+section {
+  display: none;
+  position: absolute; 
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+.box {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  right: 53%;
+  padding: 20px 25px 0 25px;
+  font-size: 20px;
+  line-height: 27px;
+  color: #fff;
+  background-color: rgba(0,0,0,0.2);
+  border-radius: 2px;
+    -webkit-box-shadow:0 0 12px rgba(0, 0, 0, 0.2), 0 0 70px rgba(0, 0, 0, 0.4) inset;
+       -moz-box-shadow:0 0px 12px rgba(0, 0, 0, 0.2), 0 0 70px rgba(0, 0, 0, 0.4) inset;
+            box-shadow:0 0px 12px rgba(0, 0, 0, 0.2), 0 0 70px rgba(0, 0, 0, 0.4) inset;
+}
+
+.icons {
+  font-size: 19px;
+  font-weight: bold;
+}
+
+.icons i {
+  font-size: 19px;
+}

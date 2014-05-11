@@ -1,12 +1,74 @@
 {% extends "_base.html" %}
 
+{% block css %}
+<script type="text/javascript" src="//use.typekit.net/ttj1nwa.js"></script>
+<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+{% endblock %}
+
+{% block nav %}{% endblock %}
+
 {% block content %}
-<div class="container">
-  <div class="jumbotron">
-    <h1>Welcome to your new project!</h1>
-    <p>Replace this message with your own content in <code>{{ PROJECT_PATH }}/index.html</code>.</p>
-    <p>Learn more on the <a href="_example.html">example page</a>.</p>
+<section id="intro">
+  <div class="featured-image-wrapper" data-imgLiquid-verticalAlign="100%"> 
+    <img src="img/speaking.jpg" class="featured-image" alt="David Eads at Software Freedom Day 2013" />
   </div>
-</div>
+  <div class="box">
+    <h1>{{ intro_title }}</h1>
+    <p>{{ intro }}</p>
+    <p>I build news applications for <a href="#newsapps">the Chicago Tribune</a>, <a href="#speaking">speak and teach</a> about technology, organize a <a href="#openhack">community data journalism workshop</a>, developed the <a href="#tarbell">Tarbell publishing platform</a>, and <a href="#freegeekchicago">helped start FreeGeek Chicago</a>.</p> 
+    <hr />
+    <div class="row">
+      <div class="col-md-7">
+        <p class="icons"><i class="fa fa-download"></i> Resume (PDF)</p>
+        <p class="icons"><i class="fa fa-envelope"></i> davideads@gmail.com</p>
+        <p class="icons"><i class="fa fa-phone"></i> 773-354-2285</p>
+      </div>
+      <div class="col-md-5">
+        <p class="icons"><i class="fa fa-twitter-square"></i> Twitter</p>
+        <p class="icons"><i class="fa fa-facebook-square"></i> Facebook</p>
+        <p class="icons"><i class="fa fa-github-square"></i> Github</p>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="newsapps">
+  <div class="featured-image-wrapper"> 
+    <img src="img/migrahack.jpg" class="featured-image" alt="David Eads at Migrahack Mexico City 2014" />
+  </div>
+  <div class="box">
+    <h1></h1>
+    <p></p>
+    <p>I build news applications for <a href="#newsapps">the Chicago Tribune</a>, <a href="#speaking">speak and teach</a> about technology, organize a <a href="#openhack">community data journalism workshop</a>, developed the <a href="#tarbell">Tarbell publishing platform</a>, and <a href="#freegeekchicago">helped start FreeGeek Chicago</a>.</p> 
+  </div>
+</section>
+
+
 {% endblock content %}
+
+{% block scripts %}
+<script src="js/imgLiquid-min.js"></script>
+<script>
+function responsivize() {
+  $('.featured-image-wrapper')
+    .css({
+      height: $(window).height() + 'px',
+      width:  $(window).width() + 'px',
+    });
+  var height = $(window).height();
+  $('section').each(function(i) {
+    var top = height * i;
+    $(this).css({
+      'top': top + 'px'
+    }).fadeIn(2500);
+  });
+}
+$(document).ready(function() {
+  $('.featured-image-wrapper').imgLiquid();
+  responsivize();
+  $(window).on('resize', responsivize);
+});
+</script>
+{% endblock %}
 
