@@ -3,11 +3,21 @@ body {
   font-family: "petersburg-web",serif;
   background-color: #333;
 }
+a:link, a:visited {
+  color: #fffac2;
+}
+a:hover, a:active {
+  color: #fff888;
+}
+a:hover, a:active {
+  color: #fff888;
+}
 h1, h2, h3, h4, h5, h6 {
   font-family: "federico-web",serif;
 }
 h1 {
-  font-size: 70px;
+  font-size: 60px;
+  line-height: 90px;
 }
 section {
   display: none;
@@ -19,18 +29,27 @@ section {
 }
 .box {
   position: absolute;
-  top: 40px;
-  left: 40px;
-  right: 53%;
   padding: 20px 25px 0 25px;
   font-size: 20px;
   line-height: 27px;
   color: #fff;
-  background-color: rgba(0,0,0,0.2);
-  border-radius: 2px;
-    -webkit-box-shadow:0 0 12px rgba(0, 0, 0, 0.2), 0 0 70px rgba(0, 0, 0, 0.4) inset;
-       -moz-box-shadow:0 0px 12px rgba(0, 0, 0, 0.2), 0 0 70px rgba(0, 0, 0, 0.4) inset;
-            box-shadow:0 0px 12px rgba(0, 0, 0, 0.2), 0 0 70px rgba(0, 0, 0, 0.4) inset;
+  background-color: rgba(0,0,0,0.3);
+    -webkit-box-shadow:0 0 30px rgba(0, 0, 0, 0.2), 0 0 140px rgba(0, 0, 0, 0.4) inset;
+       -moz-box-shadow:0 0px 30px rgba(0, 0, 0, 0.2), 0 0 140px rgba(0, 0, 0, 0.4) inset;
+            box-shadow:0 0px 30px rgba(0, 0, 0, 0.2), 0 0 140px rgba(0, 0, 0, 0.4) inset;
+}
+.dark .box {
+  background-color: rgba(0,0,0,0.6);
+      -webkit-box-shadow:0 0 30px rgba(0, 0, 0, 0.2), 0 0 180px rgba(0, 0, 0, 0.6) inset;
+       -moz-box-shadow:0 0px 30px rgba(0, 0, 0, 0.2), 0 0 180px rgba(0, 0, 0, 0.6) inset;
+            box-shadow:0 0px 30px rgba(0, 0, 0, 0.2), 0 0 180px rgba(0, 0, 0, 0.6) inset;
+
+}
+.very-dark .box {
+  background-color: rgba(0,0,0,0.75);
+      -webkit-box-shadow:0 0 50px rgba(0, 0, 0, 0.7), 0 0 140px rgba(0, 0, 0, 0.6) inset;
+       -moz-box-shadow:0 0px 50px rgba(0, 0, 0, 0.7), 0 0 140px rgba(0, 0, 0, 0.6) inset;
+            box-shadow:0 0px 50px rgba(0, 0, 0, 0.7), 0 0 140px rgba(0, 0, 0, 0.6) inset;
 }
 
 .icons {
@@ -40,4 +59,25 @@ section {
 
 .icons i {
   font-size: 19px;
+}
+
+.video-link, .presentation-location {
+  display: inline-block;
+  font-family: helvetica, arial, sans-serif;
+  font-size: 15px;
+}
+.presentation-location {
+  margin-right: 10px;
+}
+.video-link {
+  whitespace: nowrap;
+}
+
+ul {
+  padding-top: 14px;
+  padding-left: 0;
+}
+li {
+  margin-bottom: 14px;
+  list-style: none;
 }
