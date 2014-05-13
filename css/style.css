@@ -12,7 +12,7 @@ a:hover, a:active {
 a:hover, a:active {
   color: #fff888;
 }
-h1, h2, h3, h4, h5, h6 {
+.nav .intro {
   font-family: "federico-web",serif;
 }
 .navbar {
@@ -21,17 +21,18 @@ h1, h2, h3, h4, h5, h6 {
 .nav {
   font-size: 16px;
 }
-/*.nav .intro {*/
-  /*font-size: 24px;*/
-  /*padding-top: 3px;*/
-/*}*/
+.nav .intro {
+  font-size: 24px;
+  padding-top: 6px;
+}
 .navbar-inverse {
   background-color: rgba(10,10,10,0.9);
   border: none;
 }
 h1 {
-  font-size: 60px;
-  line-height: 90px;
+  font-size: 45px;
+  line-height: 54px;
+  margin-bottom: 27px;
 }
 section {
   display: none;
@@ -53,7 +54,7 @@ p.credit {
 }
 .box {
   position: absolute;
-  padding: 20px 25px 0 25px;
+  padding: 10px 25px 0 25px;
   font-size: 19px;
   line-height: 28px;
   color: #fff;
@@ -98,6 +99,7 @@ p.credit {
 
 section ul {
   padding-top: 14px;
+  padding-bottom: 14px;
   padding-left: 0;
 }
 section ul.no-pad {
@@ -120,7 +122,7 @@ section.newsapps .box .row-fluid {
   width: 90%;
 }
 section.newsapps .box h1 {
-  margin-top: 40px;
+  margin-top: 60px;
 }
 @media (min-width: 768px) {
   .navbar-nav>li>a {

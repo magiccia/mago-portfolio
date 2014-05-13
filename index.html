@@ -25,7 +25,7 @@
     </div>
     <div class="box" style="{% if section.box_top %}top: {{ section.box_top }}; {% endif %}{% if section.box_left %}left: {{ section.box_left }}; {% endif %}{% if section.box_bottom %}bottom: {{ section.box_bottom }}; {% endif %}{% if section.box_right %}right: {{ section.box_right }}; {% endif %}{% if section.box_width %}width: {{ section.box_width }};{% endif %}">
       <div class="row-fluid">
-        <h1>{{ section.title }}</h1>
+        {% if section.title %}<h1>{{ section.title }}</h1>{% endif %}
         {{ render_file("sections/{0}.html".format(section.id))|process_text }}
       </div>
     </div>

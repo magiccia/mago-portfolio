@@ -32,7 +32,7 @@ S3_BUCKETS = {
     # Provide target -> s3 url pairs, such as:
     #     "mytarget": "mys3url.bucket.url/some/path"
     # then use tarbell publish mytarget to publish to it
-    "production": "tarbell.recoveredfactory.net/eads-portfolio",
+    "production": "recoveredfactory.net",
     "staging": "tarbell.recoveredfactory.net/eads-portfolio",
 }
 
