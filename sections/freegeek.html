@@ -1,0 +1,12 @@
+<p>In 2005, I helped start <a href="http://freegeekchicago.org">FreeGeek Chicago</a>. FreeGeek Chicago is a 501(c)(3) not-for-profit community organization that recycles used computers and parts to provide functional computers, education and job skills training in exchange for community service. I helped write the <a href="https://github.com/freegeekchicago/fgc-docs/blob/master/constitution.md">FreeGeek Constitution</a>, <a href="https://github.com/freegeekchicago/fgc-docs/blob/master/statement_funding.md">Statement on Funding</a>, and <a href="https://github.com/freegeekchicago/fgc-docs/blob/master/code-of-conduct.md">Code of Conduct</a>. In 2013, FreeGeek Chicago recycled over 20 tons of electronics and 768 volunteers logged over 22,000 hours.</p>
+
+<p class="small">Notable coverage</p>
+
+<ul class="no-pad">
+  {% for freegeek_link in freegeek_links %}
+  <li class="link-small">
+    <a href="{{ freegeek_link.link }}">{{ freegeek_link.title }}</a> <small>{{ freegeek_link.publication }}</small>
+  </li>
+  {% endfor %}
+</ul>
+

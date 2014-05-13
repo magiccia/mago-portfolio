@@ -1,5 +1,9 @@
 {% extends "_base.html" %}
 
+{% block favicon %}
+<link rel="shortcut icon" href="img/favicon.ico" />
+{% endblock %}
+
 {% block css %}
 <script type="text/javascript" src="//use.typekit.net/ttj1nwa.js"></script>
 <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
@@ -15,6 +19,9 @@
   <section id="{{ section.id }}"{% if section.class %} class="{{ section.class }}"{% endif %}>
     <div class="featured-image-wrapper"{% if section.img_attrs %} {{ section.img_attrs|process_text }}{% endif %}> 
       <img src="img/{{ section.id }}.jpg" class="featured-image" alt="{{ section.photo_description }}" />
+      {% if section.photo_credit %}
+      <p class="credit">Photo by {{ section.photo_credit }}</p>
+      {% endif %}
     </div>
     <div class="box" style="{% if section.box_top %}top: {{ section.box_top }}; {% endif %}{% if section.box_left %}left: {{ section.box_left }}; {% endif %}{% if section.box_bottom %}bottom: {{ section.box_bottom }}; {% endif %}{% if section.box_right %}right: {{ section.box_right }}; {% endif %}{% if section.box_width %}width: {{ section.box_width }};{% endif %}">
       <h1>{{ section.title }}</h1>

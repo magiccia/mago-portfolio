@@ -8,9 +8,9 @@
       {% for presentation in presentations %}
       {% if loop.index % 3 == 1 %}
       <li>
-        <a href="{{ presentation.link }}" class="presentation-title" target="_blank">{{ presentation.title }}</a><br/>
+        <a href="{{ presentation.link }}" class="presentation-title">{{ presentation.title }}</a><br/>
         <span class="presentation-location">{{ presentation.location }}</span>
-        {% if presentation.video_link %} <a href="{{ presentation.video_link }}" class="video-link" target="_blank"><i class="fa fa-caret-square-o-right"></i> Watch video</a>{% endif %}
+        {% if presentation.video_link %} <a href="{{ presentation.video_link }}" class="video-link"><i class="fa fa-caret-square-o-right"></i> Watch video</a>{% endif %}
       </li>
       {% endif %}
       {% endfor %}
@@ -21,9 +21,9 @@
       {% for presentation in presentations %}
       {% if loop.index % 3 == 2 %}
       <li>
-        <a href="{{ presentation.link }}" class="presentation-title" target="_blank">{{ presentation.title }}</a><br/>
+        <a href="{{ presentation.link }}" class="presentation-title">{{ presentation.title }}</a><br/>
         <span class="presentation-location">{{ presentation.location }}</span>
-        {% if presentation.video_link %} <a href="{{ presentation.video_link }}" class="video-link" target="_blank"><i class="fa fa-caret-square-o-right"></i> Watch video</a>{% endif %}
+        {% if presentation.video_link %} <a href="{{ presentation.video_link }}" class="video-link"><i class="fa fa-caret-square-o-right"></i> Watch video</a>{% endif %}
       </li>
       {% endif %}
       {% endfor %}
@@ -34,9 +34,9 @@
       {% for presentation in presentations %}
       {% if loop.index % 3 == 0 %}
       <li>
-        <a href="{{ presentation.link }}" class="presentation-title" target="_blank">{{ presentation.title }}</a><br/>
+        <a href="{{ presentation.link }}" class="presentation-title">{{ presentation.title }}</a><br/>
         <span class="presentation-location">{{ presentation.location }}</span>
-        {% if presentation.video_link %} <a href="{{ presentation.video_link }}" class="video-link" target="_blank"><i class="fa fa-caret-square-o-right"></i> Watch video</a>{% endif %}
+        {% if presentation.video_link %} <a href="{{ presentation.video_link }}" class="video-link"><i class="fa fa-caret-square-o-right"></i> Watch video</a>{% endif %}
       </li>
       {% endif %}
       {% endfor %}

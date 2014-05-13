@@ -1,4 +1,4 @@
-<p>Since 2012, I have worked as a news applications developer for the Chicago Tribune. I've worked on award-winning projects and build successful open source tools.</p>
+<p>Since 2012, I have worked on the <a href="http://apps.chicagotribune.com">Chicago Tribune News Applications Team</a>. I've worked on award-winning projects and build successful open source tools.</p>
 
 <div class="row">
   <div class="col-md-4">
@@ -6,7 +6,7 @@
       {% for tribune_project in tribune_projects %}
       {% if loop.index % 3 == 1 %}
       <li>
-        <a href="{{ tribune_project.link }}" class="presentation-title" target="_blank">{{ tribune_project.title }}</a><br/>
+        <a href="{{ tribune_project.link }}" class="presentation-title">{{ tribune_project.title }}</a><br/>
         <span class="presentation-location">{{ tribune_project.location }}</span>
       </li>
       {% endif %}
@@ -18,7 +18,7 @@
       {% for tribune_project in tribune_projects %}
       {% if loop.index % 3 == 2 %}
       <li>
-        <a href="{{ tribune_project.link }}" class="presentation-title" target="_blank">{{ tribune_project.title }}</a><br/>
+        <a href="{{ tribune_project.link }}" class="presentation-title">{{ tribune_project.title }}</a><br/>
         <span class="presentation-location">{{ tribune_project.location }}</span>
       </li>
       {% endif %}
@@ -30,7 +30,7 @@
       {% for tribune_project in tribune_projects %}
       {% if loop.index % 3 == 0 %}
       <li>
-        <a href="{{ tribune_project.link }}" class="presentation-title" target="_blank">{{ tribune_project.title }}</a><br/>
+        <a href="{{ tribune_project.link }}" class="presentation-title">{{ tribune_project.title }}</a><br/>
         <span class="presentation-location">{{ tribune_project.location }}</span>
       </li>
       {% endif %}
