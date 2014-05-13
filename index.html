@@ -11,21 +11,23 @@
 <link rel="stylesheet" type="text/css" href="css/style.css" />
 {% endblock %}
 
-{% block nav %}{% endblock %}
+{% block bodyattrs %}data-spy="scroll" data-target=".eads-nav"{% endblock %}
 
 {% block content %}
 
 {% for section in sections %}
-  <section id="{{ section.id }}"{% if section.class %} class="{{ section.class }}"{% endif %}>
+  <section id="{{ section.id }}" class="{{ section.id }}{% if section.class %} {{ section.class }}{% endif %}">
     <div class="featured-image-wrapper"{% if section.img_attrs %} {{ section.img_attrs|process_text }}{% endif %}> 
       <img src="img/{{ section.id }}.jpg" class="featured-image" alt="{{ section.photo_description }}" />
       {% if section.photo_credit %}
-      <p class="credit">Photo by {{ section.photo_credit }}</p>
+      <p class="credit">Photo copyright {{ section.photo_credit }}</p>
       {% endif %}
     </div>
     <div class="box" style="{% if section.box_top %}top: {{ section.box_top }}; {% endif %}{% if section.box_left %}left: {{ section.box_left }}; {% endif %}{% if section.box_bottom %}bottom: {{ section.box_bottom }}; {% endif %}{% if section.box_right %}right: {{ section.box_right }}; {% endif %}{% if section.box_width %}width: {{ section.box_width }};{% endif %}">
-      <h1>{{ section.title }}</h1>
-      {{ render_file("sections/{0}.html".format(section.id))|process_text }}
+      <div class="row-fluid">
+        <h1>{{ section.title }}</h1>
+        {{ render_file("sections/{0}.html".format(section.id))|process_text }}
+      </div>
     </div>
   </section>
 {% endfor %}
