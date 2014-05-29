@@ -40,22 +40,22 @@
 <script src="js/imgLiquid-min.js"></script>
 <script>
 function responsivize() {
-  $('section').each(function(i) {
-    if ($(window).width() > 767) {
-      var top = $(window).height() * i;
-      $('.featured-image-wrapper')
-        .imgLiquid()
-        .css({
-          height: $(window).height() + 'px',
-          width:  $(window).width() + 'px',
-        });
-      $(this).css({
-        'position': 'absolute',
-        'top': top + 'px',
-        'height': $(window).height() + 'px',
-      }).fadeIn(2500);
-    } 
-  });
+  if ($(window).width() > 767) {
+    $('section').each(function(i) {
+        var top = $(window).height() * i;
+        $('.featured-image-wrapper')
+          .imgLiquid()
+          .css({
+            height: $(window).height() + 'px',
+            width:  $(window).width() + 'px',
+          });
+        $(this).css({
+          'position': 'absolute',
+          'top': top + 'px',
+          'height': $(window).height() + 'px',
+        }).fadeIn(2500);
+    });
+  } 
 }
 $(document).ready(function() {
   responsivize();
