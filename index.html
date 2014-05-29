@@ -19,6 +19,9 @@
   <section id="{{ section.id }}" class="{{ section.id }}{% if section.class %} {{ section.class }}{% endif %}">
     <div class="featured-image-wrapper"{% if section.img_attrs %} {{ section.img_attrs|process_text }}{% endif %}> 
       <img src="img/{{ section.id }}.jpg" class="featured-image" alt="{{ section.photo_description }}" />
+      {% if section.photo_credit %}
+      <p class="credit">Photo copyright {{ section.photo_credit }}</p>
+      {% endif %}
     </div>
     <div class="box" style="{% if section.box_top %}top: {{ section.box_top }}; {% endif %}{% if section.box_left %}left: {{ section.box_left }}; {% endif %}{% if section.box_bottom %}bottom: {{ section.box_bottom }}; {% endif %}{% if section.box_right %}right: {{ section.box_right }}; {% endif %}{% if section.box_width %}width: {{ section.box_width }};{% endif %}">
       <div class="row-fluid">
@@ -26,9 +29,6 @@
         {{ render_file("sections/{0}.html".format(section.id))|process_text }}
       </div>
     </div>
-    {% if section.photo_credit %}
-    <p class="credit">Photo copyright {{ section.photo_credit }}</p>
-    {% endif %}
   </section>
 {% endfor %}
 
@@ -36,43 +36,31 @@
 {% endblock content %}
 
 {% block scripts %}
+<script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.6.0/underscore-min.js"></script>
 <script src="js/imgLiquid-min.js"></script>
 <script>
 function responsivize() {
-  $('.featured-image-wrapper')
-    .css({
-      height: $(window).height() + 'px',
-      width:  $(window).width() + 'px',
-    });
-  var height = $(window).height();
-
   $('section').each(function(i) {
-    var top = height * i;
     if ($(window).width() > 767) {
+      var top = $(window).height() * i;
+      $('.featured-image-wrapper')
+        .imgLiquid()
+        .css({
+          height: $(window).height() + 'px',
+          width:  $(window).width() + 'px',
+        });
       $(this).css({
         'position': 'absolute',
         'top': top + 'px',
-        'height': height + 'px',
+        'height': $(window).height() + 'px',
       }).fadeIn(2500);
-      $(this).find('.box').css({
-        'position': 'absolute',
-        'margin-top': 0,
-      });
-    } else {
-      $(this).css({
-        'position': 'relative',
-      }).fadeIn(2500);
-      $(this).find('.box').css({
-        'position': 'static',
-        'margin-top': (-1 * height) + 'px',
-      });
-    }
+    } 
   });
 }
 $(document).ready(function() {
-  $('.featured-image-wrapper').imgLiquid();
   responsivize();
-  $(window).on('resize', responsivize);
+  var lazy_responsivize = _.debounce(responsivize, 250);
+  $(window).on('resize', lazy_responsivize);
 });
 </script>
 {% endblock %}

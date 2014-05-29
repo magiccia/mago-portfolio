@@ -132,9 +132,10 @@ section.newsapps .box h1 {
 }
 @media (max-width: 767px) {
   .navbar { display: none; }
-  /*section { position: static; display: block; }*/
+  section { position: relative !important; display: block !important; }
   .credit {
     position: static;
   }
-  .box { padding-bottom: 32px; width: auto !important; } 
+  .featured-image-wrapper img { width: 100%; }
+  .box { position: static; padding-bottom: 32px; width: auto !important; } 
 }
