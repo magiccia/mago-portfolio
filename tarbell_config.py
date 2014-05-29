@@ -20,7 +20,7 @@ EXCLUDES = ["*.md", "requirements.txt"]
 SPREADSHEET_KEY = "1pmJ7eRVHddZNtQVdk-qZMn9OLNgTX9sgeDaduWNjwos"
 
 # Spreadsheet cache lifetime in seconds. (Default: 4)
-# SPREADSHEET_CACHE_TTL = 4
+SPREADSHEET_CACHE_TTL = 60
 
 # Get context from a local file or URL. This file can be a CSV or Excel
 # spreadsheet file. Relative, absolute, and remote (http/https) paths can be 
