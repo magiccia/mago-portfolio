@@ -8,7 +8,7 @@ Tarbell project configuration
 NAME = "eads-portfolio"
 
 # Descriptive title of project
-TITLE = "David Eads"
+TITLE = "Mago Torres"
 
 # Exclude these files from publication
 EXCLUDES = ["*.md", "requirements.txt"]
@@ -17,7 +17,7 @@ EXCLUDES = ["*.md", "requirements.txt"]
 # CREATE_JSON = True
 
 # Google spreadsheet key
-SPREADSHEET_KEY = "1pmJ7eRVHddZNtQVdk-qZMn9OLNgTX9sgeDaduWNjwos"
+SPREADSHEET_KEY = "1xeUJcdOBIcDPqeuunyHlzdOVjJcJp4RVMGrGx5ni-0o"
 
 # Spreadsheet cache lifetime in seconds. (Default: 4)
 SPREADSHEET_CACHE_TTL = 60
@@ -39,5 +39,5 @@ S3_BUCKETS = {
 # Default template variables
 DEFAULT_CONTEXT = {
     'name': 'eads-portfolio',
-    'title': 'David Eads'
+    'title': 'Mago Torres'
 }
