@@ -1,40 +1,26 @@
-<p>I have been teaching at <a href="http://www.uia.mx">Universidad Iberoamericana</a> at the Master Program since 2011, and at the undergraduate Communication program since 2012. The classes I have teached are:</p>
+<p>I have been teaching at <a href="http://www.uia.mx">Universidad Iberoamericana</a> at the Master Program since 2011, and at the undergraduate Communication program since 2012. The classes I have taught are:</p>
 
 <div class="row">
   <div class="col-md-4">
     <ul>
-      {% for teaching in teaching %}
-      {% if loop.index % 3 == 1 %}
+      {% for class in teaching[0:3] %}
       <li>
-        <a href="{{ teaching.link }}" class="description-title">{{ teaching.title }}</a><br/>
-        <span class="presentation-location">{{ teaching.location }}</span>
+        {{ class.title }} <br/>
+        <span class="presentation-location">{{ class.description }}</span>
       </li>
-      {% endif %}
       {% endfor %}
     </ul>
   </div>
   <div class="col-md-4">
-    <ul>
-      {% for tribune_project in tribune_projects %}
-      {% if loop.index % 3 == 2 %}
+   <ul>
+      {% for class in teaching[3:] %}
       <li>
-        <a href="{{ tribune_project.link }}" class="presentation-title">{{ tribune_project.title }}</a><br/>
-        <span class="presentation-location">{{ tribune_project.location }}</span>
+        {{ class.title }} <br/>
+        <span class="presentation-location">{{ class.description }}</span>
       </li>
-      {% endif %}
-      {% endfor %}
-    </ul>
-  </div>
-  <div class="col-md-4">
-    <ul>
-      {% for tribune_project in tribune_projects %}
-      {% if loop.index % 3 == 0 %}
-      <li>
-        <a href="{{ tribune_project.link }}" class="presentation-title">{{ tribune_project.title }}</a><br/>
-        <span class="presentation-location">{{ tribune_project.location }}</span>
-      </li>
-      {% endif %}
       {% endfor %}
     </ul>
   </div>
 </div>
+
+<p>Other teaching at the gradutate program at <a href="http://septien.mx/">Escuela de Periodismo Carlos Septién</a>, at the undergraduate program at <a href="http://www.itesm.mx/wps/portal?WCM_GLOBAL_CONTEXT=">Tecnológico de Monterrey</a> and at the <a href="http://www.salzburg.umd.edu/2014-studentsfaculty">Salzburg Academy on Media and Global Change 2014</a>.</p>

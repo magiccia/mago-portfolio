@@ -1,6 +1,6 @@
 body {
   padding-top: 0;
-  font-family: "petersburg-web",serif;
+  font-family: "athelas",serif;
   background-color: #000;
 }
 a:link, a:visited {
@@ -13,7 +13,7 @@ a:hover, a:active {
   color: #fff888;
 }
 .nav .intro {
-  font-family: "federico-web",serif;
+  font-family: "lush",serif;
 }
 .navbar {
   min-height: 40px;
